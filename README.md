@@ -9,7 +9,12 @@
 ```
 pip install pandas sqlalchemy python-dotenv kaggle
 ```
-
+## Credential Data Format
+```
+DATABASE_URL=
+KAGGLE_USERNAME=
+KAGGLE_KEY=
+```
 ## Usage
 
 Run this script

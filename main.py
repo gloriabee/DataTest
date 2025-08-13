@@ -14,7 +14,7 @@ def main():
     # 1. Retrieve data from Kaggle API
     os.makedirs("./data", exist_ok=True)
     kaggle.api.authenticate()
-    print("⬇️ Downloading dataset from Kaggle...")
+    print("Downloading dataset from Kaggle...")
     kaggle.api.dataset_download_files(
         "pavansubhasht/ibm-hr-analytics-attrition-dataset",
         path="./data",
@@ -31,7 +31,7 @@ def main():
     df = df.dropna()
 
     # Drop irrelevant columns
-    drop_columns = ["Over18", "EmployeeCount", "StandardHours", "EmployeeNumber"]
+    drop_columns = ["Over18", "EmployeeCount", "StandardHours", "EmployeeNumber","StockOptionLevel","TrainingTimesLastYear"]
     df.drop(columns=drop_columns, inplace=True, errors="ignore")
 
     # Separate employees who left
@@ -41,7 +41,7 @@ def main():
     stay_df = df[df["Attrition"] == "No"]
 
     # 3. Connect and insert into PostgreSQL
-    print("📤 Loading data into PostgreSQL...")
+    print("Loading data into PostgreSQL")
     engine = create_engine(DATABASE_URL)
     df.to_sql("All_employees",con=engine,if_exists="replace",index=False)
     left_df.to_sql("left_employee", con=engine, if_exists="replace", index=False)

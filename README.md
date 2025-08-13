@@ -1,4 +1,4 @@
-# IBM HR Employees Attrition
+# IBM HR Employees Attrition (EDL Process)
 
 ## Prequisties
 
@@ -6,7 +6,6 @@
 - PostgreSQL
 - Kaggle API credentials
 - Required Python packages
-
 ```
 pip install pandas sqlalchemy python-dotenv kaggle
 ```

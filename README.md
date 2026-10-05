@@ -5,4 +5,4 @@ This project demonstrates extraction data from source system (raw layer), transf
 ## Data Architecture 
 
 The data architecture for this project follows Medallion Architecture **Brronze**, **Silver**, and **Gold** Layers: 
-![Data Architecture]()
+![Data Architecture](architecture.png)

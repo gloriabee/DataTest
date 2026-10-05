@@ -1,24 +1,8 @@
-# IBM HR Employees Attrition (EDL Process)
+# Medallion Architecture with Data Engineering Project
 
-## Prequisties
+This project demonstrates extraction data from source system (raw layer), transform extracted data with cleaning steps (silver layer) and finally transform business insight data (gold layer) to load it into our warehouse. 
 
-- Python 3.12.\*
-- PostgreSQL
-- Kaggle API credentials
-- Required Python packages
-```
-pip install pandas sqlalchemy python-dotenv kaggle
-```
-## Credential Data Format
-```
-DATABASE_URL=
-KAGGLE_USERNAME=
-KAGGLE_KEY=
-```
-## Usage
+## Data Architecture 
 
-Run this script
-
-```
-python main.py
-```
+The data architecture for this project follows Medallion Architecture **Brronze**, **Silver**, and **Gold** Layers: 
+![Data Architecture]()

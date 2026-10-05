@@ -23,10 +23,9 @@ The data architecture for this project follows Medallion Architecture **Brronze*
 DEMovies/
 |
 |datasets/
-|scripts/
-|  |---bronze
-|  |---silver
-|  |---gold
+|bronze.ipynb
+|silver.ipynb
+|gold.ipynb
 |README.md
 |.gitignore
 ```
